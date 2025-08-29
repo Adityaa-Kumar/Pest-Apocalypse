@@ -839,7 +839,7 @@ offset_top = -298.0
 offset_right = 260.0
 offset_bottom = -255.0
 theme_override_font_sizes/font_size = 32
-text = " Main Menu "
+text = "BACK"
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.54281, 0, 0.574348)

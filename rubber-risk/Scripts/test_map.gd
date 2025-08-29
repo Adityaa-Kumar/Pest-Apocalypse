@@ -18,10 +18,3 @@ func _ready() -> void:
 		var player = truck_scn.instantiate()
 		player_spawn.add_child(player)
 		player.top_level = true
-	
-
-func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("esc") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	elif Input.is_action_just_pressed("esc") and Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

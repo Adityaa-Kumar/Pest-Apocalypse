@@ -10,7 +10,7 @@ func _on_button_pressed() -> void:
 		Global.selected_car = Global.vehicle.SEDAN
 	elif truck_armour.visible == true:
 		Global.selected_car = Global.vehicle.TRUCK
-	get_tree().change_scene_to_file("res://Map/test_map.tscn")
+	get_tree().change_scene_to_file("res://Map/home_base.tscn")
 
 func _on_button_2_pressed() -> void:
 	get_tree().quit(0)
@@ -45,8 +45,4 @@ func _on_button_4_pressed() -> void:
 
 
 func _on_button_5_pressed() -> void:
-	get_tree().change_scene_to_file("res://Map/menu.tscn")
-
-
-func _on_button_6_pressed() -> void:
-	get_tree().change_scene_to_file("res://Map/upgrades.tscn")
+	get_tree().change_scene_to_file("res://Map/home_base.tscn")
