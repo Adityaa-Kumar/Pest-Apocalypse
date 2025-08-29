@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://behus0j6r6j12"]
+[gd_scene load_steps=64 format=4 uid="uid://behus0j6r6j12"]
 
 [ext_resource type="Script" uid="uid://bcq8q2kxp68i4" path="res://Scripts/menu.gd" id="1_r3u5h"]
 [ext_resource type="Texture2D" uid="uid://ckobbk2pqsijx" path="res://Assets/textures/sand/sand_04_color_2k.png" id="2_h65fr"]
@@ -43,6 +43,13 @@ Button/colors/font_pressed_color = Color(0, 1, 0, 1)
 Button/colors/icon_focus_color = Color(1, 1, 1, 0)
 Button/font_sizes/font_size = 64
 Button/fonts/font = ExtResource("5_poywp")
+
+[sub_resource type="LabelSettings" id="LabelSettings_r3u5h"]
+font = ExtResource("5_poywp")
+outline_size = 2
+outline_color = Color(0, 1, 0, 1)
+shadow_size = 3
+shadow_color = Color(1, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ckxav"]
 albedo_color = Color(0, 0, 0, 1)
@@ -869,6 +876,25 @@ scale = Vector2(1.00505, 0.992381)
 theme_override_fonts/font = ExtResource("5_poywp")
 theme_override_font_sizes/font_size = 70
 text = "DAMAGE"
+
+[node name="Metal" type="Control" parent="Camera3D/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -52.0
+offset_top = 23.0
+offset_right = -12.0
+offset_bottom = 63.0
+grow_horizontal = 0
+
+[node name="Label_metal" type="Label" parent="Camera3D/CanvasLayer/Metal"]
+offset_left = -119.0
+offset_right = -23.0
+offset_bottom = 35.0
+text = "Metal:
+"
+label_settings = SubResource("LabelSettings_r3u5h")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.54281, 0, 0.574348)
