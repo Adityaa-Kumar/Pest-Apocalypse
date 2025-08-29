@@ -24,12 +24,11 @@ Global="*res://Scripts/Global.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
-window/stretch/mode="viewport"
+window/size/mode=2
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
+enabled=PackedStringArray("res://addons/compass/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
 
 [file_customization]
 
@@ -46,6 +45,9 @@ folder_colors={
 [global_group]
 
 Player=""
+Building=""
+Ground=""
+Enemy=""
 
 [input]
 
