@@ -46,3 +46,9 @@ func _on_button_4_pressed() -> void:
 
 func _on_button_5_pressed() -> void:
 	get_tree().change_scene_to_file("res://Map/home_base.tscn")
+
+func _on_health_up_pressed() -> void:
+	pass # Replace with function body.
+
+func _on_damage_up_pressed() -> void:
+	pass # Replace with function body.

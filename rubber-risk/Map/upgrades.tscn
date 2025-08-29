@@ -841,6 +841,35 @@ offset_bottom = -255.0
 theme_override_font_sizes/font_size = 32
 text = "BACK"
 
+[node name="Control" type="Control" parent="Camera3D/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HealthUp" type="Button" parent="Camera3D/CanvasLayer/Control"]
+offset_left = 144.0
+offset_top = -270.0
+offset_right = 632.0
+offset_bottom = -26.0
+scale = Vector2(1.00505, 0.992381)
+theme_override_fonts/font = ExtResource("5_poywp")
+theme_override_font_sizes/font_size = 70
+text = "HEALTH"
+
+[node name="DamageUp" type="Button" parent="Camera3D/CanvasLayer/Control"]
+offset_left = 659.0
+offset_top = -270.0
+offset_right = 1147.0
+offset_bottom = -26.0
+scale = Vector2(1.00505, 0.992381)
+theme_override_fonts/font = ExtResource("5_poywp")
+theme_override_font_sizes/font_size = 70
+text = "DAMAGE"
+
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.54281, 0, 0.574348)
 mesh = SubResource("CylinderMesh_ru77h")
@@ -946,3 +975,5 @@ speed_scale = 0.07
 [connection signal="pressed" from="Camera3D/CanvasLayer/buttons/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Camera3D/CanvasLayer/buttons/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Camera3D/CanvasLayer/buttons/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/Control/HealthUp" to="." method="_on_health_up_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/Control/DamageUp" to="." method="_on_damage_up_pressed"]
