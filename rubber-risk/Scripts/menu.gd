@@ -28,4 +28,25 @@ func _on_button_3_pressed() -> void:
 		pickup_armour.visible = true
 		sedan_armour.visible = false
 		truck_armour.visible = false
-	
+
+func _on_button_4_pressed() -> void:
+	if pickup_armour.visible == true:
+		sedan_armour.visible = false
+		pickup_armour.visible = false
+		truck_armour.visible = true
+	elif sedan_armour.visible == true:
+		pickup_armour.visible = true
+		sedan_armour.visible = false
+		truck_armour.visible = false
+	elif truck_armour.visible == true:
+		pickup_armour.visible = false
+		sedan_armour.visible = true
+		truck_armour.visible = false
+
+
+func _on_button_5_pressed() -> void:
+	get_tree().change_scene_to_file("res://Map/menu.tscn")
+
+
+func _on_button_6_pressed() -> void:
+	get_tree().change_scene_to_file("res://Map/upgrades.tscn")

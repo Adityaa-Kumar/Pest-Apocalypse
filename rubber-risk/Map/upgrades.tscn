@@ -1,13 +1,13 @@
-[gd_scene load_steps=63 format=4 uid="uid://blsw4kqsk7674"]
+[gd_scene load_steps=63 format=4 uid="uid://behus0j6r6j12"]
 
-[ext_resource type="Texture2D" uid="uid://ckobbk2pqsijx" path="res://Assets/textures/sand/sand_04_color_2k.png" id="1_tj141"]
-[ext_resource type="Script" uid="uid://bcq8q2kxp68i4" path="res://Scripts/menu.gd" id="1_wmv4b"]
-[ext_resource type="Texture2D" uid="uid://57ybd6eveen7" path="res://Assets/textures/sand/sand_04_normal_gl_2k.png" id="2_ckxav"]
-[ext_resource type="Texture2D" uid="uid://bm6uee5cisqfk" path="res://Assets/textures/sand/sand_04_roughness_2k.png" id="3_ckxav"]
-[ext_resource type="FontFile" uid="uid://bpqrym8b16w0s" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="4_73gyw"]
-[ext_resource type="Texture2D" uid="uid://brjqfn2yevsff" path="res://Assets/vehicles/pickup_armour_Zombie_Atlas.png" id="6_wmv4b"]
-[ext_resource type="Texture2D" uid="uid://cqd8wciviidft" path="res://Assets/vehicles/sedan_armour_Zombie_Atlas.png" id="7_5u2v3"]
-[ext_resource type="Texture2D" uid="uid://bbkkwcd8kh7iw" path="res://Assets/vehicles/truck_armour_Zombie_Atlas.png" id="8_pmllv"]
+[ext_resource type="Script" uid="uid://bcq8q2kxp68i4" path="res://Scripts/menu.gd" id="1_r3u5h"]
+[ext_resource type="Texture2D" uid="uid://ckobbk2pqsijx" path="res://Assets/textures/sand/sand_04_color_2k.png" id="2_h65fr"]
+[ext_resource type="Texture2D" uid="uid://57ybd6eveen7" path="res://Assets/textures/sand/sand_04_normal_gl_2k.png" id="3_iyut6"]
+[ext_resource type="Texture2D" uid="uid://bm6uee5cisqfk" path="res://Assets/textures/sand/sand_04_roughness_2k.png" id="4_hkd4w"]
+[ext_resource type="FontFile" uid="uid://bpqrym8b16w0s" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="5_poywp"]
+[ext_resource type="Texture2D" uid="uid://brjqfn2yevsff" path="res://Assets/vehicles/pickup_armour_Zombie_Atlas.png" id="6_qr7ch"]
+[ext_resource type="Texture2D" uid="uid://cqd8wciviidft" path="res://Assets/vehicles/sedan_armour_Zombie_Atlas.png" id="7_mvlcm"]
+[ext_resource type="Texture2D" uid="uid://bbkkwcd8kh7iw" path="res://Assets/vehicles/truck_armour_Zombie_Atlas.png" id="8_25lfx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2ihcf"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -25,11 +25,11 @@ glow_bloom = 0.15
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ihcf"]
 albedo_color = Color(0.473194, 0.377202, 0.38047, 1)
-albedo_texture = ExtResource("1_tj141")
-roughness_texture = ExtResource("3_ckxav")
+albedo_texture = ExtResource("2_h65fr")
+roughness_texture = ExtResource("4_hkd4w")
 normal_enabled = true
 normal_scale = 6.0
-normal_texture = ExtResource("2_ckxav")
+normal_texture = ExtResource("3_iyut6")
 uv1_scale = Vector3(12, 12, 12)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qs2b8"]
@@ -42,7 +42,7 @@ Button/colors/font_hover_color = Color(1, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0, 1, 0, 1)
 Button/colors/icon_focus_color = Color(1, 1, 1, 0)
 Button/font_sizes/font_size = 64
-Button/fonts/font = ExtResource("4_73gyw")
+Button/fonts/font = ExtResource("5_poywp")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ckxav"]
 albedo_color = Color(0, 0, 0, 1)
@@ -59,7 +59,7 @@ rings = 2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f18fi"]
 resource_name = "Atlas"
 cull_mode = 2
-albedo_texture = ExtResource("6_wmv4b")
+albedo_texture = ExtResource("6_qr7ch")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enbk2"]
 resource_name = "Headlights"
@@ -267,7 +267,7 @@ shadow_mesh = SubResource("ArrayMesh_3fybi")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dh677"]
 resource_name = "Atlas"
 cull_mode = 2
-albedo_texture = ExtResource("7_5u2v3")
+albedo_texture = ExtResource("7_mvlcm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbsa8"]
 resource_name = "Headlights"
@@ -505,7 +505,7 @@ shadow_mesh = SubResource("ArrayMesh_1pnc3")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emxra"]
 resource_name = "Atlas"
 cull_mode = 2
-albedo_texture = ExtResource("8_pmllv")
+albedo_texture = ExtResource("8_25lfx")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_h5sih"]
 _surfaces = [{
@@ -782,7 +782,7 @@ _data = {
 }
 
 [node name="Menu" type="Node3D"]
-script = ExtResource("1_wmv4b")
+script = ExtResource("1_r3u5h")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tj141")
@@ -797,7 +797,8 @@ transform = Transform3D(0.744869, 0.00172214, -0.667208, 0, 0.999997, 0.00258111
 mesh = SubResource("PlaneMesh_qs2b8")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.835308, -0.0512821, -0.547386, 0, 0.99564, -0.0932769, 0.549783, 0.0779149, 0.831666, 0.665945, 1.10034, 3.93996)
+transform = Transform3D(1, 0, 0, 0, 0.78019, 0.625542, 0, -0.625542, 0.78019, 7.56427, 2.64981, 5.9179)
+fov = 99.3636
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera3D"]
 
@@ -806,38 +807,39 @@ layout_mode = 3
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
+offset_left = -2.0
 offset_top = -20.0
-offset_right = 40.0
+offset_right = 38.0
 offset_bottom = 20.0
 grow_vertical = 2
 theme = SubResource("Theme_wmv4b")
 
-[node name="Button" type="Button" parent="Camera3D/CanvasLayer/buttons"]
-layout_mode = 0
-offset_left = 115.0
-offset_top = -151.0
-offset_right = 567.0
-offset_bottom = 0.999969
-scale = Vector2(0.684751, 0.673188)
-text = "PLAY"
-
-[node name="Button2" type="Button" parent="Camera3D/CanvasLayer/buttons"]
-layout_mode = 0
-offset_left = 115.0
-offset_top = 40.0
-offset_right = 567.0
-offset_bottom = 186.0
-scale = Vector2(0.684751, 0.673188)
-text = "EXIT"
-
 [node name="Button3" type="Button" parent="Camera3D/CanvasLayer/buttons"]
 layout_mode = 0
-offset_left = 856.0
-offset_top = 278.0
-offset_right = 1076.0
-offset_bottom = 321.0
+offset_left = 46.0
+offset_top = -24.0
+offset_right = 266.0
+offset_bottom = 19.0
 theme_override_font_sizes/font_size = 32
-text = "switch"
+text = "<-"
+
+[node name="Button4" type="Button" parent="Camera3D/CanvasLayer/buttons"]
+layout_mode = 0
+offset_left = 1010.0
+offset_top = -22.0
+offset_right = 1230.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 32
+text = "->"
+
+[node name="Button5" type="Button" parent="Camera3D/CanvasLayer/buttons"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = -298.0
+offset_right = 260.0
+offset_bottom = -255.0
+theme_override_font_sizes/font_size = 32
+text = " Main Menu "
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.54281, 0, 0.574348)
@@ -847,6 +849,7 @@ mesh = SubResource("CylinderMesh_ru77h")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.54281, 0, 0.574348)
 
 [node name="pickup_armour" type="Node3D" parent="car_selector"]
+visible = false
 
 [node name="Pickup_Armored" type="MeshInstance3D" parent="car_selector/pickup_armour"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00671288, 1.10237, 0.0743506)
@@ -905,7 +908,6 @@ mesh = SubResource("ArrayMesh_w2ko0")
 skeleton = NodePath("")
 
 [node name="truck_armour" type="Node3D" parent="car_selector"]
-visible = false
 
 [node name="FrontWheel_R" type="MeshInstance3D" parent="car_selector/truck_armour"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.940242, 0.438884, 1.16185)
@@ -941,6 +943,6 @@ libraries = {
 autoplay = "rotate"
 speed_scale = 0.07
 
-[connection signal="pressed" from="Camera3D/CanvasLayer/buttons/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Camera3D/CanvasLayer/buttons/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Camera3D/CanvasLayer/buttons/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/buttons/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/buttons/Button5" to="." method="_on_button_5_pressed"]
