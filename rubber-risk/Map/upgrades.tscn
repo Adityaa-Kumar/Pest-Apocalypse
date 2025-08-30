@@ -858,6 +858,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="HealthUp" type="Button" parent="Camera3D/CanvasLayer/Control"]
+layout_mode = 0
 offset_left = 144.0
 offset_top = -270.0
 offset_right = 632.0
@@ -867,7 +868,8 @@ theme_override_fonts/font = ExtResource("5_poywp")
 theme_override_font_sizes/font_size = 70
 text = "HEALTH"
 
-[node name="DamageUp" type="Button" parent="Camera3D/CanvasLayer/Control"]
+[node name="AmmoUp" type="Button" parent="Camera3D/CanvasLayer/Control"]
+layout_mode = 0
 offset_left = 659.0
 offset_top = -270.0
 offset_right = 1147.0
@@ -875,7 +877,7 @@ offset_bottom = -26.0
 scale = Vector2(1.00505, 0.992381)
 theme_override_fonts/font = ExtResource("5_poywp")
 theme_override_font_sizes/font_size = 70
-text = "DAMAGE"
+text = "AMMO"
 
 [node name="Metal" type="Control" parent="Camera3D/CanvasLayer"]
 layout_mode = 3
@@ -889,6 +891,7 @@ offset_bottom = 63.0
 grow_horizontal = 0
 
 [node name="Label_metal" type="Label" parent="Camera3D/CanvasLayer/Metal"]
+layout_mode = 0
 offset_left = -119.0
 offset_right = -23.0
 offset_bottom = 35.0
@@ -1002,4 +1005,4 @@ speed_scale = 0.07
 [connection signal="pressed" from="Camera3D/CanvasLayer/buttons/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Camera3D/CanvasLayer/buttons/Button5" to="." method="_on_button_5_pressed"]
 [connection signal="pressed" from="Camera3D/CanvasLayer/Control/HealthUp" to="." method="_on_health_up_pressed"]
-[connection signal="pressed" from="Camera3D/CanvasLayer/Control/DamageUp" to="." method="_on_damage_up_pressed"]
+[connection signal="pressed" from="Camera3D/CanvasLayer/Control/AmmoUp" to="." method="_on_ammo_up_pressed"]

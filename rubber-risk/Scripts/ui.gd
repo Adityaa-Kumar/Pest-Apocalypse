@@ -34,4 +34,4 @@ func _on_mm_btn_pressed() -> void:
 	get_tree().paused = false
 	game_paused = false
 	pause_menu.hide()
-	get_tree().change_scene_to_file("res://Map/menu.tscn")
+	get_tree().change_scene_to_file("res://Map/menu_debug.tscn")

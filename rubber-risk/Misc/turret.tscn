@@ -1,22 +1,10 @@
-[gd_scene load_steps=22 format=4 uid="uid://d0edndfe8rfgi"]
+[gd_scene load_steps=19 format=4 uid="uid://d0edndfe8rfgi"]
 
 [ext_resource type="Script" uid="uid://b72xyfx2qu5kq" path="res://Scripts/turret.gd" id="1_ka2sq"]
 [ext_resource type="Texture2D" uid="uid://bw4rgk4p517pq" path="res://Assets/turret/textures/TP_7_DW_Turret_Mat_baseColor.png" id="2_q0p54"]
 [ext_resource type="Texture2D" uid="uid://bptqln33k4if6" path="res://Assets/turret/textures/TP_7_DW_Turret_Mat_metallicRoughness.png" id="3_0rh1o"]
 [ext_resource type="Texture2D" uid="uid://drcrg8n82ftqn" path="res://Assets/turret/textures/TP_7_DW_Turret_Mat_normal.png" id="4_oyp5q"]
 [ext_resource type="Texture2D" uid="uid://day0du47k6yyr" path="res://Assets/textures/crosshairs_tilesheet_white@2.png" id="5_4n2e3"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ka2sq"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-
-[sub_resource type="Sky" id="Sky_q0p54"]
-sky_material = SubResource("ProceduralSkyMaterial_ka2sq")
-
-[sub_resource type="Environment" id="Environment_0rh1o"]
-background_mode = 2
-sky = SubResource("Sky_q0p54")
-tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5ny0"]
 resource_name = "TP_7_DW_Turret_Mat"
@@ -173,9 +161,6 @@ size = Vector3(5, 5, 5000)
 transform = Transform3D(0.005, 0, 0, 0, 0.005, -1.11022e-18, 0, 1.11022e-18, 0.005, 0, 0, 0)
 script = ExtResource("1_ka2sq")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_0rh1o")
-
 [node name="Light_7TP_DW_Turret_L_TP_7_DW_Turret_Mat_0" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_a0i1m")
 skeleton = NodePath("")
@@ -225,7 +210,6 @@ draw_pass_1 = SubResource("BoxMesh_xkwdg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="gun"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, 2555.85)
-visible = false
 cast_shadow = 0
 mesh = SubResource("BoxMesh_q0p54")
 

@@ -14,7 +14,7 @@ func _on_button_pressed() -> void:
 		Global.selected_car = Global.vehicle.SEDAN
 	elif truck_armour.visible == true:
 		Global.selected_car = Global.vehicle.TRUCK
-	get_tree().change_scene_to_file("res://Map/home_base.tscn")
+	SceneLoader.load_scene("res://Map/home_base.tscn")
 
 func _on_button_2_pressed() -> void:
 	get_tree().quit(0)
@@ -49,13 +49,13 @@ func _on_button_4_pressed() -> void:
 
 
 func _on_button_5_pressed() -> void:
-	get_tree().change_scene_to_file("res://Map/home_base.tscn")
+	SceneLoader.load_scene("res://Map/home_base.tscn")
 
 func _on_health_up_pressed() -> void:
 	if Global.player_resource_global.Metal >= 10:
 		if Global.selected_car == Global.vehicle.PICKUP:
 			Global.pickup_health += 10
-			Global.player_resource_global.Metal -= 10
+			Global.Metal -= 10
 		elif Global.selected_car == Global.vehicle.SEDAN:
 			Global.sedan_health += 10
 			Global.player_resource_global.Metal -= 10
@@ -63,5 +63,13 @@ func _on_health_up_pressed() -> void:
 			Global.truck_health += 10
 			Global.player_resource_global.Metal -= 10
 
-func _on_damage_up_pressed() -> void:
+func _on_ammo_up_pressed() -> void:
 	pass # Replace with function body.
+
+
+func _on_button_test_2_pressed() -> void:
+	SceneLoader.load_scene("res://Map/test_map_2.tscn")
+
+
+func _on_button_smol_pressed() -> void:
+	SceneLoader.load_scene("res://Map/small_map.tscn")

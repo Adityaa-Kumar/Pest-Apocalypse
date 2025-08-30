@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Risk of Rubber"
-run/main_scene="uid://blsw4kqsk7674"
+run/main_scene="uid://jguq5xajnqmd"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 Global="*res://Scripts/Global.gd"
+SceneLoader="*res://addons/maaacks_scene_loader/base/scenes/autoloads/scene_loader.tscn"
 
 [display]
 
@@ -29,7 +30,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/compass/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
+enabled=PackedStringArray("res://addons/asset_placer/plugin.cfg", "res://addons/compass/plugin.cfg", "res://addons/maaacks_scene_loader/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
 
 [file_customization]
 
@@ -40,7 +41,7 @@ folder_colors={
 "res://Resources/": "blue",
 "res://Scripts/": "green",
 "res://Vehicles/": "teal",
-"res://addons/": "gray"
+"res://addons/": "purple"
 }
 
 [global_group]
@@ -111,6 +112,10 @@ esc={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[maaacks_scene_loader]
+
+disable_update_check=false
 
 [rendering]
 
